@@ -5,9 +5,9 @@ import Eg from "./eg";
 
 export default function Cipher() {
   const [reverse, setReverse] = useState(false)
-  const [text, setText] = useState('');
+  const [text, setText] = useState('hello');
   const [cipher, setCipher] = useState('');
-  const [offset, setOffset] = useState(7);
+  const [offset, setOffset] = useState(3);
 
   const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -40,15 +40,15 @@ export default function Cipher() {
     reverse ?
       setText(cipher.split('').map(word => Decrypt(word, offset)).toString().replaceAll(',', '')) :
       setCipher(text.split('').map(word => Encrypt(word, offset)).toString().replaceAll(',', ''))
-  }, [text, cipher, offset])
+  }, [text, cipher, offset, reverse])
 
 
   return (
-    <section className="">
+    <section className=" min-h-dvh px-4 md:px-6">
 
-      <h1 className="text-center font-geistMono font-bold text-2xl py-5">Caesar Cipher</h1>
+      <h1 className="font-geistSans font-bold text-3xl pt-3 pl-10 md:pl-0 mb-3">Caesar Cipher</h1>
 
-      <section className="p-10 font-geistMono flex flex-col items-center justify-start md:items-start md:justify-center gap-2 md:flex-row h-[780px] bg-neutral-900 md:h-96 ">
+      <section className=" font-geistMono flex flex-col items-center justify-start md:items-start md:justify-center gap-2 md:flex-row mb-5">
         <div className="w-full">
           <h1 className="">Text</h1>
           <textarea spellCheck='false' rows={12} autoComplete="off" name="text" placeholder="Text" className="block max-h-72 w-full bg-transparent border-[0.1px] p-3 border-zinc-700"
@@ -60,7 +60,7 @@ export default function Cipher() {
         </div>
 
         <div className="border-[0.1px] border-zinc-700 p-1 shrink-0 select-none self-center ">
-          <label htmlFor="offset" className="block mx-auto w-fit text-white/50">Offset |
+          <label htmlFor="offset" className="block mx-auto w-fit text-foreground">Offset |
             <input type="number" min={0} max={25} name="offset" id="offset" className="ml-2 bg-transparent text-foreground focus:outline-none text-right " value={offset}
               onChange={(e) => parseInt(e.target.value) > 25 ? setOffset(1) : setOffset(parseInt(e.target.value) ? Math.abs(parseInt(e.target.value)) : 1)}
             />

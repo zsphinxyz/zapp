@@ -7,7 +7,7 @@ export default function Eg() {
           The Vigenère Cipher is a polyalphabetic substitution cipher that improves upon the Caesar Cipher. It uses a keyword to shift the letters of the alphabet, making it much harder to break than simple substitution ciphers.
         </p>
         <p className="leading-relaxed mb-4">
-          This method was first described by Giovan Battista Bellaso in 1553, but misattributed to Blaise de Vigenère in the 19th century. It remained unbroken for three centuries, earning it the nickname "le chiffre indéchiffrable" (the indecipherable cipher).
+          This method was first described by Giovan Battista Bellaso in 1553, but misattributed to Blaise de Vigenère in the 19th century. It remained unbroken for three centuries, earning it the nickname &quot;le chiffre indéchiffrable&quot; (the indecipherable cipher).
         </p>
         <p className="leading-relaxed mb-8">
           The formula to encrypt a letter is: <span className="font-mono bg-neutral-300 p-1 rounded">E(i) = (P(i) + K(i mod m)) mod 26</span>, where <span className="font-mono bg-neutral-300 p-1 rounded">P(i)</span> is the i-th letter of the plaintext, <span className="font-mono bg-neutral-300 p-1 rounded">K(i mod m)</span> is the i-th letter of the key (repeated as necessary), and <span className="font-mono bg-neutral-300 p-1 rounded">m</span> is the length of the key.
@@ -34,7 +34,7 @@ export default function Eg() {
             3. The shift is performed by treating A=0, B=1, C=2, etc., adding the values, and taking the result modulo 26.
           </p>
           <p className="leading-relaxed">
-            This process creates a different Caesar Cipher for each letter of the key, significantly increasing the cipher's strength compared to a simple Caesar Cipher.
+            This process creates a different Caesar Cipher for each letter of the key, significantly increasing the cipher&apos;s strength compared to a simple Caesar Cipher.
           </p>
         </div>
       </div>

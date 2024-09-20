@@ -66,7 +66,7 @@ export default function Aside() {
         <div className="pl-2 space-y-1 min-h-52">
           {
             links.map(link => (
-              <Link key={link.id} href={link.href} className={`block md:text-lg font-sans hover:underline ${path == link.href ? 'text-foreground font-medium' : 'text-stone-700 '}`}>{link.title}</Link>
+              <Link key={link.id} href={link.href} className={`block md:text-lg font-sans hover:underline font-medium ${path == link.href ? 'text-foreground' : 'text-stone-600'}`}>{link.title}</Link>
             ))
           }
         </div>
@@ -77,7 +77,7 @@ export default function Aside() {
           <p className="text-base md:text-lg font-bold mb-3 -ml-2 text-stone-800 select-none">More▼</p>
           {
             others.map(link => (
-              <Link key={link.id} href={link.href} className="block md:text-lg font-sans font-medium text-stone-700 hover:underline hover:text-stone-900" target="_blank">{link.title}<span className="text-stone-500"> ↳</span></Link> 
+              <Link key={link.id} href={link.href} className="block md:text-lg font-sans font-medium text-stone-600 hover:underline hover:text-stone-900" target="_blank">{link.title}<span className="text-stone-500"> ↳</span></Link> 
             ))
           }
         </div>

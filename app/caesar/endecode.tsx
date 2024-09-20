@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 export default function EnDecode() {
 
@@ -9,7 +9,7 @@ export default function EnDecode() {
   const [cipher, setCipher] = useState('');
   const [offset, setOffset] = useState(3);
 
-  const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const alphabets = useMemo(() => 'abcdefghijklmnopqrstuvwxyz'.split(''), []);
 
   function Encrypt(text: string, offset: number) {
     if (alphabets.join('').includes(text.toLowerCase())) {
@@ -41,8 +41,6 @@ export default function EnDecode() {
       setText(cipher.split('').map(word => Decrypt(word, offset)).toString().replaceAll(',', '')) :
       setCipher(text.split('').map(word => Encrypt(word, offset)).toString().replaceAll(',', ''))
   }, [text, cipher, offset, reverse])
-
-
 
   return (
     <section className=" font-geistMono flex flex-col items-center justify-start md:items-start md:justify-center gap-2 md:flex-row mb-5">

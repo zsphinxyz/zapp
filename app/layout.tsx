@@ -33,9 +33,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased md:!overflow-auto bg-stone-300`}
       >
-        <main className="flex max-w-screen-2xl justify-center mx-auto">
+        <main className="container flex max-w-screen-2xl justify-center mx-auto">
           <Aside />
-          <section className="container mx-auto basis-full p-2 min-h-dvh">
+          <section className=" mx-auto basis-full p-2 min-h-dvh">
 
             <section className="bg-neutral-100 rounded-lg overflow-clip min-h-[calc(100dvh-16px)]">
 

@@ -17,6 +17,12 @@ export default function Aside() {
       title: 'Vigenere Cipher',
       href: '/vigenere'
     },
+    {
+      id: 3,
+      title: 'Count the Cans',
+      href: '/can'
+
+    },
 
   ]
 
@@ -53,7 +59,7 @@ export default function Aside() {
         <button onClick={()=>setOpen(true)} className="w-10 h-8 rounded-r-md bg-foreground text-background absolute -left-1 top-3 border border-foreground block md:hidden text-2xl">≡</button>
       </>
 
-      <section className="min-w-60 max-w-96 md:min-w-40 max-h-dvh absolute -left-full bg-neutral-300 md:bg-transparent h-dvh md:sticky top-0" style={{left: open ? 0 : ''}}>
+      <section className="min-w-60 max-w-96 md:min-w-40 max-h-dvh absolute -left-full bg-neutral-300 md:bg-transparent h-dvh md:sticky top-0 z-50" style={{left: open ? 0 : ''}}>
 
         <div className=" flex items-center justify-between py-2">
           <Link href='/' className="leading-10 text-2xl font-black px-2 text-gray-900 font-geistMono select-none" draggable={true}>ZAPPS</Link>
@@ -61,23 +67,23 @@ export default function Aside() {
         </div>
 
 
-          <div className="w-full h-[1px] bg-neutral-400 mb-2" />
+        <div className="w-full h-[1px] bg-neutral-400 mb-2" />
 
-        <div className="pl-2 space-y-1 min-h-52">
+        <div className="pl-2 space-y-2 min-h-52">
           {
             links.map(link => (
-              <Link key={link.id} href={link.href} className={`block md:text-lg font-sans hover:underline font-medium ${path == link.href ? 'text-foreground' : 'text-stone-600'}`}>{link.title}</Link>
+              <Link key={link.id} href={link.href} className={`block text-base font-sans hover:underline font-medium ${path == link.href ? 'text-foreground' : 'text-stone-600'}`}>{link.title}</Link>
             ))
           }
         </div>
 
         <div className="w-full h-[1px] bg-neutral-400 my-3" />
 
-        <div className="pl-3 space-y-1 ">
-          <p className="text-base md:text-lg font-bold mb-3 -ml-2 text-stone-800 select-none">More▼</p>
+        <div className="pl-3 space-y-2 ">
+          <p className="text-base font-bold mb-3 -ml-2 text-stone-800 select-none">More▼</p>
           {
             others.map(link => (
-              <Link key={link.id} href={link.href} className="block md:text-lg font-sans font-medium text-stone-600 hover:underline hover:text-stone-900" target="_blank">{link.title}<span className="text-stone-500"> ↳</span></Link> 
+              <Link key={link.id} href={link.href} className="block text-base font-sans font-medium text-stone-600 hover:underline hover:text-stone-900" target="_blank">{link.title}<span className="text-stone-500"> ↳</span></Link> 
             ))
           }
         </div>

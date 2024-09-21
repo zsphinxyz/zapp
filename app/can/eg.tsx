@@ -5,7 +5,7 @@ export default function Eg() {
     <h2 className="text-2xl font-bold mb-4">Count the Cans: Problem Explanation</h2>
     
     <p className="mb-4">
-      The "Count the Cans" problem involves calculating the total number of cans in a pyramid-like structure, 
+      The &quot;Count the Cans&quot; problem involves calculating the total number of cans in a pyramid-like structure, 
       with optional additional cans on top.
     </p>
 
@@ -51,6 +51,5 @@ export default function Eg() {
       </p>
     </div>
   </div>
-
   )
 }

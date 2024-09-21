@@ -7,8 +7,8 @@ export default function Can() {
   const [top, setTop] = useState(3)
   const [addition, setAddition] = useState(0)
   const [errorMsg, setErrorMsg] = useState('')
-  const [containerWidth, setContainerWidth] = useState(10)
-  const [containerHeight, setContainerHeight] = useState(15) 
+  const [containerWidth] = useState(10)
+  const [containerHeight] = useState(15) 
 
   const range = useMemo(() =>
     (start: number, stop: number, step: number) =>

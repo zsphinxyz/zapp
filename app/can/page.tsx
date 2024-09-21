@@ -1,5 +1,13 @@
+import { Metadata } from 'next'
 import Can from './can'
 import Eg from './eg'
+
+export const metadata:Metadata = {
+  title: 'Count the Cans',
+  description: 'Count the Cans Problem'
+
+}
+
 
 export default function page() {
   return (

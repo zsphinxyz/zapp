@@ -1,5 +1,3 @@
-
-import { useState } from "react"
 import Sort from "./sort";
 
 export default function Booklet() {

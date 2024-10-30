@@ -6,12 +6,12 @@ export default function Sort() {
 
   const [pages, setPages] = useState(8);
 
-  let arr:any[] = Array.from({length: pages}, (_, i) => i+1)
+  let arr:number[] = Array.from({length: pages}, (_, i) => i+1)
   arr = arr.length % 4 != 0 ? arr.concat(Array(4 - arr.length % 4).fill(undefined)) : arr     // fill with undefined for extra pages
 
-  let arr1:any[] = arr.slice(0, arr.length/2) 
-  let arr2:any[] = arr.slice(arr.length/2).reverse()
-  let pairArr = arr2.map( (_, i) => [arr1[i], arr2[i]] ).map( (pair,i) => i % 2 ==0 ? pair.reverse() : pair).flat()   // pair two arr into one
+  let arr1:number[] = arr.slice(0, arr.length/2) 
+  let arr2:number[] = arr.slice(arr.length/2).reverse()
+  const pairArr = arr2.map( (_, i) => [arr1[i], arr2[i]] ).map( (pair,i) => i % 2 ==0 ? pair.reverse() : pair).flat()   // pair two arr into one
 
 
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Book({ arr }: { arr: any[] }) {
+export default function Book({ arr }: { arr: number[] }) {
   const [sheet, setSheet] = useState(-1)
   let c = 0
 
@@ -9,8 +9,8 @@ export default function Book({ arr }: { arr: any[] }) {
       <div className="h-56 w-40 mx-auto relative transition-all" style={{ translate: '50%' }}>
         {
           Array( arr.length / 2 ).fill(0).map((_, i) => {
-            let front = arr[c];
-            let back = arr[c + 1];
+            const front = arr[c];
+            const back = arr[c + 1];
 
             c = c + 2
             return (

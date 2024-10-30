@@ -23,6 +23,12 @@ export default function Aside() {
       href: '/can'
 
     },
+    {
+      id: 4,
+      title: 'Booklet Print',
+      href: '/booklet'
+
+    },
 
   ]
 
@@ -67,23 +73,23 @@ export default function Aside() {
         </div>
 
 
-        <div className="w-full h-[1px] bg-neutral-400 mb-2" />
+        <hr className="w-full border border-neutral-400 mb-2" />
 
-        <div className="pl-2 space-y-2 min-h-52">
+        <div className="md:pl-2 space-y-1 min-h-80 ">
           {
             links.map(link => (
-              <Link key={link.id} href={link.href} className={`block text-base font-sans hover:underline font-medium ${path == link.href ? 'text-foreground' : 'text-stone-600'}`}>{link.title}</Link>
+              <Link key={link.id} href={link.href} className={`block text-base font-sans hover:bg-neutral-100 p-1 rounded-md font-medium transition-all ${path == link.href ? 'text-foreground bg-neutral-100/80' : 'text-stone-600'}`}>{link.title}</Link>
             ))
           }
         </div>
 
-        <div className="w-full h-[1px] bg-neutral-400 my-3" />
+        <hr className="w-full border border-neutral-400 my-3" />
 
-        <div className="pl-3 space-y-2 ">
-          <p className="text-base font-bold mb-3 -ml-2 text-stone-800 select-none">More▼</p>
+        <div className="md:pl-3 space-y-1">
+          <p className="text-base font-bold mb-3 md:-ml-2 text-stone-800 select-none">More▼</p>
           {
             others.map(link => (
-              <Link key={link.id} href={link.href} className="block text-base font-sans font-medium text-stone-600 hover:underline hover:text-stone-900" target="_blank">{link.title}<span className="text-stone-500"> ↳</span></Link> 
+              <Link key={link.id} href={link.href} className="block text-base font-sans font-medium text-stone-600  hover:bg-neutral-100 p-1 rounded-md transition-all" target="_blank">{link.title}<span className="text-stone-500"> ↳</span></Link> 
             ))
           }
         </div>

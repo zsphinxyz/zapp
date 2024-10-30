@@ -24,4 +24,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .flip {
+    transform: rotateY(-180deg);
+  }
+  .noFlip {
+    transform: rotateY(0deg);
+  }
 }

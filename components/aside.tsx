@@ -29,6 +29,11 @@ export default function Aside() {
       href: '/booklet'
 
     },
+    {
+      id: 5,
+      title: 'Advanced Search',
+      href: '/search'
+    }
 
   ]
 

@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import Sort from "./sort";
+
+export const metadata:Metadata = {
+  title: 'Total Cans',
+  description: 'Count the total cans in a pyramid shape pile'
+}
 
 export default function Booklet() {
 
